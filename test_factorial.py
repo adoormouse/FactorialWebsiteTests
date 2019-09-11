@@ -34,7 +34,7 @@ def test_factorial_status_code_200():
 
 
 def test_factorial_status_code_404():
-    """Test for status_code 400, when using bad post url."""
+    """Test for status_code 404, when using bad post url."""
     url_bad = "http://{}:{}/{}".format(ip_address, port, "bad")
     test_values = get_factorial_format(1)
     r = requests.post(url_bad, data=test_values['data'])
